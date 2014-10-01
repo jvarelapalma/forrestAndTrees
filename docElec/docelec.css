@@ -1,0 +1,45 @@
+div {
+	border: 1px dashed black;
+}
+/*
+label {
+	 visibility: hidden;
+}
+div {
+	width: 1900px;
+}
+#encDocElec {
+
+}
+#priLineaEnc {
+	display: inline-block;
+}
+#infoEmi {
+	display: block;
+	width: 400px;
+	height: 300px;
+	float: left;
+}
+#infoEmi #urlEmp{
+	float: left;
+}
+#infoEmi #eMailEmp{
+	float: left;
+}
+#priLineaEnc img {
+	float: left;
+	height: 150px;
+	width: 150px;
+	display: inline-block;
+}
+#infDoc {
+	height: 150px;
+	width: 150px;
+	border: 4px solid red;
+	display: inline-block;
+	float: right;
+}
+#encDet label {
+	visibility: visible;
+}
+*/
