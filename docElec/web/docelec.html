@@ -1,24 +1,91 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <meta charset="ISO-8859-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DocElec</title>
-    
-    <script async type="application/dart" src="docelec.dart"></script>
-    <script async src="packages/browser/dart.js"></script>
-    
-    <link rel="stylesheet" href="docelec.css">
-  </head>
-  <body>
-    <h1>DocElec</h1>
-    
-    <p>Hello world from Dart!</p>
-    
-    <div id="sample_container_id">
-      <p id="sample_text_id">Click me!</p>
-    </div>
+<head>
+    <title>Factura Electronica Folio 20216</title>
 
-  </body>
+    <link rel="stylesheet" href="docelec.css">
+</head>
+<body>
+    <form>
+        <div class="encDocElec">
+            <div class="infoEmisor">
+
+                <img src="img/check.jpg" alt="Imagen corporativa de emisor">
+
+                <label for="rznSocEmp">Razon social emisor </label>
+                <input id="rznSocEmp" type="text" name="rznSocEmp" value="Forrest & Trees">
+
+                <label for="giroEmp">Giro emisor</label>
+                <input type="text" id="giroEmp" name="giroEmp" value="ASP de Emsion de Documentos Electrónicos" placeholder="Giro emisor Emisora"/>
+
+                <label for="dirEmp">Dirección emisor</label>
+                <select id="dirEmp" name="dirEmp">
+                    <option>Las Limas 1622, Las Condes</option>
+                    <option>Teatinos 120, Santiago</option>
+                    <option>Pocuro 3049 depto 11, Providencia</option>
+                </select>
+
+                <label for="urlEmp">Sitio web emisor</label>
+                <input type="url" id="urlEmp" name="urlEmp" value="www.forrestandtrees.cl"/>
+
+                
+                <label for="eMailEmp">Correo electronico contacto emisor</label>
+                <input type="email" id="eMailEmp" name="eMailEmp" value="contacto@forrestandtrees.cl">
+
+                <label for="rutEmp">Rut emisor</label>
+                <input type="text" id="rutEmp" name="rutEmp" value="1-9"/>
+
+                <label for="tipoDte">Tipo documento</label>
+                <input type="text" id="tipoDte" name="tipoDte" value="33">
+
+                <label for="folio">Folio N°</label>
+                <input type="text" id="folio" name="folio" value="1245">
+
+                <label for="fecEmi">Fecha emision</label>
+                <input type="date" id="fecEmi" name="fecEmi" value="2014-09-30">
+            </div>
+            <div class="infoReceptor">
+
+                <label for="rznEmpCli">Señores</label>
+                <input type="text" id="rznEmpCli" name="rznEmpCli" placeholder="nombre recpeptor" value="Javier Antonio Varela Palma">
+                <label for="rutRcp">Rut receptor</label>
+                <input type="text" id="rutRcp" name="rutRcp" value="10570168-3" placeholder="Rut empresa 12345678-9">
+
+                <label for="giroRcp">Giro empresa recpeptora</label>
+                <input id="giroRcp" name="giroRcp" value="Muchas cosas punto com" placeholder="Giro receptor">
+
+                <label for="dirRcp">Dirección receptor</label>
+                <input id="dirRcp" name="dirRcp" value="Las Limas 1622, Las Condes" placeholder="Direccion empresa receptor">
+            </div>
+            <div id="totales">
+
+                <label for="mntNeto">Monto Neto del DTE</label>
+                <output id="mntNeto" name="mntNeto"></output>
+
+                <label for="IVA">19% IVA</label>
+                <output id="IVA" name="IVA">11875</output>
+
+                <label for="mntTotal">Total</label>
+                <output id="mntTotal" name="mntTotal">11875</output>
+            </div>
+        </div>
+        <div class="detallesDocElec">
+            <div class="det1">
+
+                <label for="nmbItem1">Nombre del Item</label>
+                <input type="text" id="nmbItem1" name="nmbItem1" value="Derechos por uso plataforma" placeholder="Nombre del item">
+
+                <label for="qtyItem1">Cantidad</label>
+                <input type="text" id="qtyItem1" name="qtyItem1" value="50" placeholder="cantidad10">
+
+                <label for="prcItem1">Precio</label>
+                <input type="text" id="prcItem1" name="prcItem1" value="1250" placeholder="precio :$ 120">
+
+                <label for="montoItem1">Monto</label>
+                <output id="montoItem1" name="montoItem1">62500</output>
+
+            </div>
+        </div>
+    </form>
+</body>
 </html>
